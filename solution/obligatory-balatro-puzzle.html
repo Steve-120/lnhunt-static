@@ -1,0 +1,290 @@
+
+
+
+
+
+<!doctype html>
+<html>    
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>Solution: Obligatory Balatro Puzzle</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="LN Hunt">
+    <meta property="og:description" content="Volume 1 releases Dec 6 7:00 JST. Register now!">
+    <meta property="og:image" content="https://ln-hunt.com/static/images/ln_white.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://ln-hunt.com/static/images/ln_white.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://ln-hunt.com/jsi18n/"></script>
+    <script src="../static/js/jquery.formset.js"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Red+Hat+Mono:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    
+<script>
+  /* FIXME */
+</script>
+
+</head>
+<body>
+    <a class="skip-to-main">Press enter to skip to main content.</a>
+    <nav class="top-navbar">
+        <span class="tray">
+            <div class="top-tabs">
+                <div class="top-team-actions">
+                    
+                </div>
+                <div class="site-nav">
+                    <a href="../index.html">
+                        Home
+                    </a>
+                    <a href="../about.html">
+                        About
+                    </a>
+                    
+                    
+                    <a class="selected-tab" href="../puzzles.html">
+                        Puzzles
+                    </a>
+                    
+                    <a href="../teams.html">
+                        Teams
+                    </a>
+                    
+                    <a href="../errata.html">
+                        Updates
+                    </a>
+                    
+                    
+                    <!--<a href="https://FIXME/archive">
+                        Archive
+                    </a>-->
+                </div>
+            </div>
+        </span>
+    </nav>
+    <script>
+    
+    
+    </script>
+    
+    <div class="top-more-actions">
+        
+<a href="../puzzle/obligatory-balatro-puzzle.html" class="btn">Back to the puzzle</a>
+
+    </div>
+    <div class="content">
+        
+<link rel="stylesheet" href="../static/css/nether.css">
+
+<style>
+h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+h4 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 2rem 0;
+}
+</style>
+
+<h1>
+    Solution: Obligatory Balatro Puzzle
+    <div class="solved-title-marker">Answer: <span class="solved-title-answer spoiler">DAVY JONES</span></div>
+</h1>
+
+<main class="puzzle-main">
+    <h2 style="margin-top: 0">
+        Written by
+        
+kt3, lightbulbmeow, steve120; Ideated with Cauchy, juckter
+
+    </h2>
+
+    
+    <p>We are presented with some “Balatro” boards. In the original Balatro, the playing cards and the jokers in play affect how the round is scored, with the jokers having a wide variety of effects. Scoring is done first on the playing cards from left to right alongside jokers with card-specific effects, and then the jokers that affect the final score are activated. Here, we try to figure out how this variation of “Balatro” is scored.</p>
+<p>We can use the first boards with given round scores as examples, and make some informed guesses on how the game works and how jokers work and calculate the round score for the latter boards. It is intended that there might be ambiguities on how certain jokers work; they are later pinned down once we make our final calculations.</p>
+<p><strong>Rules</strong></p>
+<p>Unlike in Balatro, cards are multiplied together in this puzzle, and exponentiated by their suit (D=1, C=2, H=3, S=4). The jokers have the following effects:</p>
+<table>
+<thead>
+<tr>
+<th>Joker</th>
+<th>Activates on</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2<sup>∑^</sup></td>
+<td>Final round score</td>
+<td>Let x be the sum of exponents of the score’s prime factorization. Replace the exponent of 2 in the final score with x.</td>
+</tr>
+<tr>
+<td>Pyramid</td>
+<td>All playing cards</td>
+<td>Score each playing card value n with the nth triangular number (given by n(n+1)/2) instead.</td>
+</tr>
+<tr>
+<td>Primorial</td>
+<td>Leftmost playing card</td>
+<td>Score the leftmost playing card value n with n# (the primorial of n) instead.</td>
+</tr>
+<tr>
+<td>Venn diagram</td>
+<td>Leftmost playing card</td>
+<td>Score the leftmost playing card value n with LCM(1,2,...,n) instead.</td>
+</tr>
+<tr>
+<td>Duplicate</td>
+<td>Rightmost card</td>
+<td>Create a duplicate of the rightmost card.</td>
+</tr>
+<tr>
+<td>Swap</td>
+<td>Rightmost playing card</td>
+<td>Create a duplicate of the rightmost playing card, with the last two digits swapped.</td>
+</tr>
+<tr>
+<td>Sigma</td>
+<td>Final round score</td>
+<td>Convert the final score x to σ(x) (the sum of positive divisors of x).</td>
+</tr>
+</tbody>
+</table>
+<p>The stone card has a fixed value of 2025 and is not considered a playing card, so it is unaffected by the pyramid joker in particular. Playing cards with a black color are negative cards that divide the round score by its value rather than multiply.</p>
+<p><strong>Example board calculations</strong></p>
+<ul>
+<li>2<sup>1</sup> × 3<sup>2</sup> × 5<sup>3</sup> × 7<sup>4</sup> = 5402250</li>
+<li>2<sup>∑^</sup>(2<sup>1</sup> × 3<sup>2</sup> × 5<sup>3</sup> × 7<sup>4</sup>) = 2<sup>10</sup> × 3<sup>2</sup> × 5<sup>3</sup> × 7<sup>4</sup> = 2765952000</li>
+<li>(58 × 59 / 2) × (82 × 83 / 2) × (166 × 167 / 2) = 80706129913</li>
+<li>(58 × 59 / 2) × (82 × 83 / 2) × (166 × 167 / 2) × 2025 = 163429913073825</li>
+<li>29# × 69<sup>3</sup> = (2 × 3 × 5 × 7 × 11 × 13 × 17 × 19 × 23 × 29) × 69<sup>3</sup> = 2125352453294070</li>
+<li>LCM(1, 2, …, 29) × 69<sup>3</sup> = (24 × 33 × 52 × 7 × 11 × 13 × 17 × 19 × 23 × 29) × 69<sup>3</sup> = 765126883185865200</li>
+<li>1 × 23<sup>2</sup> × 456<sup>3</sup> × 456<sup>3</sup> = 4756031561982541824</li>
+<li>1 × 23 × 456 × 465 = 4876920</li>
+<li>2025 × 3<sup>-4</sup> × 5<sup>-2</sup> = 1</li>
+<li>LCM(1, 2, …, 10) = 2<sup>3</sup> × 3<sup>2</sup> × 5 × 7 = 2520</li>
+<li>σ(2025) = σ(3<sup>4</sup> × 5<sup>2</sup>) = (3<sup>0</sup> + 3<sup>1</sup> + 3<sup>2</sup> + 3<sup>3</sup> + 3<sup>4</sup>) × (5<sup>0</sup> + 51 + 52) = 3751</li>
+<li>σ(10) = (1 + 2) × (1 + 5) = 18 = 2 × 3<sup>2</sup>. Then, 2<sup>∑^</sup>(2 × 3<sup>2</sup>) = 2<sup>3</sup> × 3<sup>2</sup> = 72.</li>
+<li>2<sup>∑^</sup>(10) = 2<sup>∑^</sup>(2 × 5) = 2<sup>2</sup> × 5. Then, σ(2<sup>2</sup> × 5) = (2<sup>0</sup> + 2<sup>1</sup> + 2<sup>2</sup>) × (5<sup>0</sup> + 5<sup>1</sup>) = 42.</li>
+</ul>
+<p><strong>Final calculations</strong></p>
+<ul>
+<li>2<sup>∑^</sup>(LCM(1, 2, …, 11) × 2</sup>-1</sup>) = 2<sup>∑^</sup>(2<sup>2</sup> × 3<sup>2</sup> × 5 × 7 × 11) = 2<sup>7</sup> × 3<sup>2</sup> × 5 × 7 × 11 = <strong>443520</strong></li>
+<li>LCM(1, 2, …, 12) × 2 × 7<sup>-1</sup> = 2<sup>4</sup> × 3<sup>2</sup> × 5 × 11 = <strong>7920</strong></li>
+<li>128<sup>3</sup> × 7<sup>2</sup> × 143 × 69 × 2025 × 2025 = <strong>4157776806543360000</strong></li>
+<li>2<sup>∑^</sup>(23# × 217 × 235 × 5<sup>4</sup> × 6<sup>4</sup> × 6<sup>4</sup> × 6<sup>4</sup>) = 2<sup>∑^</sup>(23# × 217 × 235 × 5<sup>4</sup> × 6<sup>4</sup> × 6<sup>4</sup>) = 2<sup>∑^</sup>(2<sup>13</sup> × 3<sup>13</sup> × 5<sup>6</sup> × 7<sup>2</sup> × 11 × 13 × 17 × 19 × 23 × 31 × 47) = 2<sup>41</sup> × 3<sup>13</sup> × 5<sup>6</sup> × 7<sup>2</sup> × 11 × 13 × 17 × 19 × 23 × 31 × 47 = <strong>4154781481226426191177580544000000</strong></li>
+<li>σ(2<sup>∑^</sup>(7<sup>3</sup> × 179 × 197)) = σ(2<sup>5</sup> × 7<sup>3</sup> × 179 × 197) = 2<sup>7</sup> × 3<sup>6</sup> × 5<sup>3</sup> × 7 × 11 = <strong>898128000</strong></li>
+<li>11# × 9<sup>3</sup> × 5<sup>2</sup> × 2<sup>4</sup> × 32 × 23 = 2<sup>10</sup> × 3<sup>7</sup> × 5<sup>3</sup> × 7 × 11 × 23 = <strong>495766656000</strong></li>
+<li>(384 × 385 / 2) × (588 × 589 / 2) × (3 × 4 / 2) × (3 × 4 / 2) = <strong>460815505920</strong></li>
+<li>σ(2<sup>∑^</sup>(15 × 7<sup>3</sup>)) = σ(2<sup>5</sup> × 3 × 5 × 7<sup>3</sup>) = 2<sup>7</sup> × 3<sup>3</sup> × 5<sup>2</sup> × 7 = <strong>604800</strong></li>
+<li>(185 × 186 / 2) × (200 × 201 / 2) × (384 × 385 / 2) × 2025 = <strong>51765179004000000</strong></li>
+</ul>
+<p>To extract, we could Google the numbers and find out that these are the orders of the sporadic groups. In fact, the flavortext clues the monster group, the largest of the sporadic groups. There are 26 sporadic groups, so we use A1Z26 to extract, indexed by size.</p>
+<table>
+<thead>
+<tr>
+<th>Order</th>
+<th>Index</th>
+<th>Letter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>443520</td>
+<td>4</td>
+<td>D</td>
+</tr>
+<tr>
+<td>7920</td>
+<td>1</td>
+<td>A</td>
+</tr>
+<tr>
+<td>4157776806543360000</td>
+<td>22</td>
+<td>V</td>
+</tr>
+<tr>
+<td>4154781481226426191177580544000000</td>
+<td>25</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>898128000</td>
+<td>10</td>
+<td>J</td>
+</tr>
+<tr>
+<td>495766656000</td>
+<td>15</td>
+<td>O</td>
+</tr>
+<tr>
+<td>460815505920</td>
+<td>14</td>
+<td>N</td>
+</tr>
+<tr>
+<td>604800</td>
+<td>5</td>
+<td>E</td>
+</tr>
+<tr>
+<td>51765179004000000</td>
+<td>19</td>
+<td>S</td>
+</tr>
+</tbody>
+</table>
+<p>Thus, the answer is <strong>DAVYJONES</strong>.</p>
+
+    
+    
+    <h2 id="authors-notes">Author&rsquo;s Notes</h2>
+    <p>kt3: At some point while making the diagrams, I got tired. You can probably tell at what point.</p>
+    
+
+    
+    
+</main>
+
+
+    </div>
+    
+    <script>
+        const skipToMainLink = document.querySelector("a.skip-to-main");
+        const mainContentElement = document.getElementsByTagName("main")?.item(0) || document.querySelector("div.content");
+        if (skipToMainLink && mainContentElement) {
+            const mainContentAnchor = document.createElement("a");
+            const anchorId = "main-content-anchor"
+            mainContentAnchor.className = anchorId;
+            mainContentAnchor.id = anchorId;
+            skipToMainLink.href = `#${anchorId}`;
+            mainContentElement.parentNode.insertBefore(mainContentAnchor, mainContentElement);
+        }
+    </script>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+</body>
+</html>

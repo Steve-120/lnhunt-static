@@ -1,0 +1,164 @@
+
+
+
+
+
+<!doctype html>
+<html>    
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>Solution: Did You Mean...</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="LN Hunt">
+    <meta property="og:description" content="Volume 1 releases Dec 6 7:00 JST. Register now!">
+    <meta property="og:image" content="https://ln-hunt.com/static/images/ln_white.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://ln-hunt.com/static/images/ln_white.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://ln-hunt.com/jsi18n/"></script>
+    <script src="../static/js/jquery.formset.js"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Red+Hat+Mono:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    
+<script>
+  /* FIXME */
+</script>
+
+</head>
+<body>
+    <a class="skip-to-main">Press enter to skip to main content.</a>
+    <nav class="top-navbar">
+        <span class="tray">
+            <div class="top-tabs">
+                <div class="top-team-actions">
+                    
+                </div>
+                <div class="site-nav">
+                    <a href="../index.html">
+                        Home
+                    </a>
+                    <a href="../about.html">
+                        About
+                    </a>
+                    
+                    
+                    <a class="selected-tab" href="../puzzles.html">
+                        Puzzles
+                    </a>
+                    
+                    <a href="../teams.html">
+                        Teams
+                    </a>
+                    
+                    <a href="../errata.html">
+                        Updates
+                    </a>
+                    
+                    
+                    <!--<a href="https://FIXME/archive">
+                        Archive
+                    </a>-->
+                </div>
+            </div>
+        </span>
+    </nav>
+    <script>
+    
+    
+    </script>
+    
+    <div class="top-more-actions">
+        
+<a href="../puzzle/did-you-mean.html" class="btn">Back to the puzzle</a>
+
+    </div>
+    <div class="content">
+        
+<link rel="stylesheet" href="../static/css/nether.css">
+
+<style>
+h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+h4 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 2rem 0;
+}
+</style>
+
+<h1>
+    Solution: Did You Mean...
+    <div class="solved-title-marker">Answer: <span class="solved-title-answer spoiler">UTILITY</span></div>
+</h1>
+
+<main class="puzzle-main">
+    <h2 style="margin-top: 0">
+        Written by
+        
+lydian
+
+    </h2>
+
+    
+    <p>Solvers are given a search box and encouraged to interact with it. Upon trying a few words from the CSW24 dictionary, as made clear by the puzzle if you try a word it doesn't recognize, they may notice there are always 6 different lines, most likely providing suggestions in the form of "Did you mean…" but sometimes saying "Your query is valid." The suggested words are always somewhat close to the original word typed by the solvers. After enough experimentation, solvers can come to the conclusion that each line has its own criterion to go off of, and that they "correct" the solver to the closest word that fits its respective criterion, measured by edit distance, with ties being broken by prioritizing words earlier in the alphabet. The criteria are as follow:</p>
+<ul>
+<li>The word's length is a prime number</li>
+<li>The word contains at least one of "do", "re", "mi", "fa", "sol", "la", or "ti"</li>
+<li>The word has exactly two letters repeated twice and no other repeated letters</li>
+<li>The word has a palindromic substring of at least length four</li>
+<li>The word starts and ends with one of "A", "E", "I", "O", "U", "Y"</li>
+<li>The word has exactly one letter not found in the top row of a standard QWERTY keyboard.</li>
+</ul>
+<p>Solvers may surmise that they need to find a word that can act as a valid query to all criteria, the only such word within the provided dictionary is <strong>UTILITY</strong>, the answer to the puzzle.</p>
+
+    
+    
+    <h2 id="authors-notes">Author&rsquo;s Notes</h2>
+    <p>The original version of this puzzle, constructed in 2021 was somewhat different, it originally had different categories of things, e.g. names of chess pieces and moons of neptune, where a query that wasn't part of these categories would get corrected into the closest one if it was a Levenshtein distance of 5 or less. Solvers had to realize that each of the sets had a word missing, and then figure out which word was a levenshtein difference of 5 of all the missing words, which would be their answer, UTILITY, same as it is now!</p>
+<p>When efforts were made to necromance the hunt out from the dead, I took a closer look at the puzzle, and despite it testsolving well, there were a few things I wasn't very thrilled about from the original version. For one, finding the missing elements is just a matter of trial and error once you realize what's going on, and there didn't seem to be a lot of "puzzliness" after said realization. But mostly the Levenshtein step while somewhat natural, felt a bit arbitrary on the 5-distance aspect, which was hard to verify with the puzzle, and was also pretty much impossible to solve by hand, you had to either vibe it out, or code! To boot, I was a bit scared of the final step feeling a bit too similar to a puzzle (<a href="https://2021.silphpuzzlehunt.com/puzzle/audit-instance.html">Audit Instance</a>) I've previously written for <a href="https://2021.silphpuzzlehunt.com/">Silph Puzzle Hunt 2021</a>. So I decided to try to come up with a way to reinterpret "Did You Mean..." in a way that felt true to the original concept, but trying to avoid the aforementioned problems! About a few weeks before the hunt I considered the "wordplay-ish properties of a word"-approach you saw now but I couldn't really figure out how to tie it in until the Tuesday before the hunt when I wrote the first draft of the new version. Some things changed, instead of the all-but-one QWERTY top row condition we have now, I had a criterion of "If you A1Z26 the letters in this word, they make a W-like shape by decreasing then increasing then decreasing then increasing as you go along the word", unsurprisingly no one got this in testsolving, so it was canned, thankfully. I also wanted to have the suggestions be ordered alphabetically, as they were in the original version of the puzzle, but with a very short window to testsolve, and other puzzles who didn't have a plan b to fall back onto getting the top priority, it was best to go with the current version that makes isolating the criteria easier to start out! Ultimately, this puzzle ended up with a very high solve:unlock ratio, and I think it's fair to count that as a success given how soon before hunt start I was fiddling with it. hope it was a welcome reprieve from a challenging R2 up until that point!</p>
+    
+
+    
+    
+</main>
+
+
+    </div>
+    
+    <script>
+        const skipToMainLink = document.querySelector("a.skip-to-main");
+        const mainContentElement = document.getElementsByTagName("main")?.item(0) || document.querySelector("div.content");
+        if (skipToMainLink && mainContentElement) {
+            const mainContentAnchor = document.createElement("a");
+            const anchorId = "main-content-anchor"
+            mainContentAnchor.className = anchorId;
+            mainContentAnchor.id = anchorId;
+            skipToMainLink.href = `#${anchorId}`;
+            mainContentElement.parentNode.insertBefore(mainContentAnchor, mainContentElement);
+        }
+    </script>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+</body>
+</html>

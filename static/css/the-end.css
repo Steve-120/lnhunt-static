@@ -1,0 +1,14 @@
+h1, h2, h3, .info-row, .puzzles-list, .puzzle-main, main, .round-flavor, .form-section, .hint-table {
+    min-width: 100%;
+    box-sizing: border-box;
+    background-color: var(--content-frame-color);
+    padding: 20px 30px;
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+@media screen {
+    html {
+        background: linear-gradient(to bottom, #09090F, #302F47, #443C61);    
+    }
+}

@@ -1,0 +1,317 @@
+
+
+
+
+
+<!doctype html>
+<html>    
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>Solution: Cursed and Hexed</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="LN Hunt">
+    <meta property="og:description" content="Volume 1 releases Dec 6 7:00 JST. Register now!">
+    <meta property="og:image" content="https://ln-hunt.com/static/images/ln_white.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://ln-hunt.com/static/images/ln_white.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://ln-hunt.com/jsi18n/"></script>
+    <script src="../static/js/jquery.formset.js"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Red+Hat+Mono:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    
+<script>
+  /* FIXME */
+</script>
+
+</head>
+<body>
+    <a class="skip-to-main">Press enter to skip to main content.</a>
+    <nav class="top-navbar">
+        <span class="tray">
+            <div class="top-tabs">
+                <div class="top-team-actions">
+                    
+                </div>
+                <div class="site-nav">
+                    <a href="../index.html">
+                        Home
+                    </a>
+                    <a href="../about.html">
+                        About
+                    </a>
+                    
+                    
+                    <a class="selected-tab" href="../puzzles.html">
+                        Puzzles
+                    </a>
+                    
+                    <a href="../teams.html">
+                        Teams
+                    </a>
+                    
+                    <a href="../errata.html">
+                        Updates
+                    </a>
+                    
+                    
+                    <!--<a href="https://FIXME/archive">
+                        Archive
+                    </a>-->
+                </div>
+            </div>
+        </span>
+    </nav>
+    <script>
+    
+    
+    </script>
+    
+    <div class="top-more-actions">
+        
+<a href="../puzzle/cursed-and-hexed.html" class="btn">Back to the puzzle</a>
+
+    </div>
+    <div class="content">
+        
+<link rel="stylesheet" href="../static/css/the-end.css">
+
+<style>
+h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+h4 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 2rem 0;
+}
+</style>
+
+<h1>
+    Solution: Cursed and Hexed
+    <div class="solved-title-marker">Answer: <span class="solved-title-answer spoiler">GRAVY BOAT</span></div>
+</h1>
+
+<main class="puzzle-main">
+    <h2 style="margin-top: 0">
+        Written by
+        
+lightbulbMEOW
+
+    </h2>
+
+    
+    <p>The first step is to notice that each file is encrypted in some way, and the clues themselves are also encoded in some way.</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Encrypted file with</th>
+<th>Encoded clues</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.avi</td>
+<td>Backwards</td>
+<td>English to Spanish</td>
+</tr>
+<tr>
+<td>2.gif</td>
+<td>Base64</td>
+<td>Caesar shift (A-&gt;B, 1-&gt;2)</td>
+</tr>
+<tr>
+<td>3.html</td>
+<td>Caesar shift (A-&gt;B, 1-&gt;2)</td>
+<td>Swap adjacent letters</td>
+</tr>
+<tr>
+<td>4.jpeg</td>
+<td>Each byte is double</td>
+<td>Inverted bits (00 -&gt; FF)</td>
+</tr>
+<tr>
+<td>5.mpeg</td>
+<td>Swap adjacent bits</td>
+<td>Interleave halves</td>
+</tr>
+<tr>
+<td>6.pdf</td>
+<td>Interleaved with ABCDEF…</td>
+<td>Each letter is double</td>
+</tr>
+<tr>
+<td>7.png</td>
+<td>Inverted bits (00 -&gt; FF)</td>
+<td>Base64</td>
+</tr>
+<tr>
+<td>8.svg</td>
+<td>English to Spanish</td>
+<td>Interleaved with ABCDEF…</td>
+</tr>
+<tr>
+<td>9.wav</td>
+<td>Interleave halves</td>
+<td>Backwards</td>
+</tr>
+</tbody>
+</table>
+<p>Notice that the file extensions are in alphabetical order, which suggests we must reorder them. The encryption/encoding methods form a cycle, which provide the ordering. The next step is to solve these subpuzzles. Each of these give either three or four words as the answer.</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Puzzle type</th>
+<th>Answer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PNG</td>
+<td>Various diagrams</td>
+<td>ELEMENTS MINESWEEPER GROUND</td>
+</tr>
+<tr>
+<td>GIF</td>
+<td>Nikoli logic puzzles</td>
+<td>TREEHOUSE SUBDUE RESPONDS</td>
+</tr>
+<tr>
+<td>HTML</td>
+<td>Crossword</td>
+<td>INDENT DEFAULT CLASSES ALIGN</td>
+</tr>
+<tr>
+<td>MPEG</td>
+<td>Rickroll :)</td>
+<td>JOKESTER DADDY FOOL VIDEOS</td>
+</tr>
+<tr>
+<td>WAV</td>
+<td>Various encodings</td>
+<td>YACHT LIGHT SURFRIDING</td>
+</tr>
+<tr>
+<td>AVI</td>
+<td>Spanish clues</td>
+<td>SATURDAY MONTHS BASEBALL</td>
+</tr>
+<tr>
+<td>SVG</td>
+<td>Various encodings</td>
+<td>SECRETLY INSIDERS ONLINE</td>
+</tr>
+<tr>
+<td>PDF</td>
+<td>Math questions</td>
+<td>LIMIT MULTIPLICITY ELLIPSE APERY</td>
+</tr>
+<tr>
+<td>JPEG</td>
+<td>Logos</td>
+<td>CHROMIUM TWITTER KELLOGGS</td>
+</tr>
+</tbody>
+</table>
+<p>Notice that each of these answers matches the full name of the extension of the next file in the cycle. For example, solving the PNG file gives "ELEMENTS MINESWEEPER GROUND", which matches the enumeration of the full name of GIF, "Graphics Interchange Format".</p>
+<p>To extract, take their common letters. The common letters spell out "<strong>SEE UNUSED FIRST LETTERS</strong>".</p>
+<table>
+<thead>
+<tr>
+<th>Common letters</th>
+<th>Unused word</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Graphic(S) Int(E)rchange Format</td>
+<td>GROUND</td>
+</tr>
+<tr>
+<td>Hyp(E)rtext Mark(U)p Language</td>
+<td>RESPONDS</td>
+</tr>
+<tr>
+<td>Movi(N)g Pict(U)re Expert(S) Group</td>
+<td>ALIGN</td>
+</tr>
+<tr>
+<td>Wav(E) Au(D)io (F)Ile Format</td>
+<td>VIDEOS</td>
+</tr>
+<tr>
+<td>Audio V(I)deo Inte(R)leave</td>
+<td>YACHT</td>
+</tr>
+<tr>
+<td>(S)calable Vec(T)or Graphics</td>
+<td>BASEBALL</td>
+</tr>
+<tr>
+<td>Portab(L)e Docum(E)nt Format</td>
+<td>ONLINE</td>
+</tr>
+<tr>
+<td>Join(T) Pho(T)ographic (E)xperts Group</td>
+<td>APERY</td>
+</tr>
+<tr>
+<td>Po(R)table Network Graphic(S)</td>
+<td>TWITTER</td>
+</tr>
+</tbody>
+</table>
+<p>Taking the first letters of the unused words spell out <strong>GRAVY BOAT</strong>.</p>
+
+    
+    
+
+    
+    
+    <h2 id="appendix">Appendix</h2>
+    <p>Here are the decrypted versions of the files:</p>
+<p><a href="../static/puzzle_resources/cursed-and-hexed/fixed/1.avi">1.avi</a><br/><a href="../static/puzzle_resources/cursed-and-hexed/fixed/2.gif">2.gif</a><br/><a href="../static/puzzle_resources/cursed-and-hexed/fixed/3.html">3.html</a><br/><a href="../static/puzzle_resources/cursed-and-hexed/fixed/4.jpeg">4.jpeg</a><br/><a href="../static/puzzle_resources/cursed-and-hexed/fixed/5.mpeg">5.mpeg</a><br/><a href="../static/puzzle_resources/cursed-and-hexed/fixed/6.pdf">6.pdf</a><br/><a href="../static/puzzle_resources/cursed-and-hexed/fixed/7.png">7.png</a><br/><a href="../static/puzzle_resources/cursed-and-hexed/fixed/8.svg">8.svg</a><br/><a href="../static/puzzle_resources/cursed-and-hexed/fixed/9.wav">9.wav</a><br/></p>
+    
+</main>
+
+
+    </div>
+    
+    <script>
+        const skipToMainLink = document.querySelector("a.skip-to-main");
+        const mainContentElement = document.getElementsByTagName("main")?.item(0) || document.querySelector("div.content");
+        if (skipToMainLink && mainContentElement) {
+            const mainContentAnchor = document.createElement("a");
+            const anchorId = "main-content-anchor"
+            mainContentAnchor.className = anchorId;
+            mainContentAnchor.id = anchorId;
+            skipToMainLink.href = `#${anchorId}`;
+            mainContentElement.parentNode.insertBefore(mainContentAnchor, mainContentElement);
+        }
+    </script>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+</body>
+</html>

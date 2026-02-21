@@ -1,0 +1,165 @@
+
+
+
+
+
+<!doctype html>
+<html>    
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>Solution: Alien Math</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="LN Hunt">
+    <meta property="og:description" content="Volume 1 releases Dec 6 7:00 JST. Register now!">
+    <meta property="og:image" content="https://ln-hunt.com/static/images/ln_white.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://ln-hunt.com/static/images/ln_white.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://ln-hunt.com/jsi18n/"></script>
+    <script src="../static/js/jquery.formset.js"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Red+Hat+Mono:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    
+<script>
+  /* FIXME */
+</script>
+
+</head>
+<body>
+    <a class="skip-to-main">Press enter to skip to main content.</a>
+    <nav class="top-navbar">
+        <span class="tray">
+            <div class="top-tabs">
+                <div class="top-team-actions">
+                    
+                </div>
+                <div class="site-nav">
+                    <a href="../index.html">
+                        Home
+                    </a>
+                    <a href="../about.html">
+                        About
+                    </a>
+                    
+                    
+                    <a class="selected-tab" href="../puzzles.html">
+                        Puzzles
+                    </a>
+                    
+                    <a href="../teams.html">
+                        Teams
+                    </a>
+                    
+                    <a href="../errata.html">
+                        Updates
+                    </a>
+                    
+                    
+                    <!--<a href="https://FIXME/archive">
+                        Archive
+                    </a>-->
+                </div>
+            </div>
+        </span>
+    </nav>
+    <script>
+    
+    
+    </script>
+    
+    <div class="top-more-actions">
+        
+<a href="../puzzle/alien-math.html" class="btn">Back to the puzzle</a>
+
+    </div>
+    <div class="content">
+        
+<link rel="stylesheet" href="../static/css/the-end.css">
+
+<style>
+h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+h4 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 2rem 0;
+}
+</style>
+
+<h1>
+    Solution: Alien Math
+    <div class="solved-title-marker">Answer: <span class="solved-title-answer spoiler">CHEBYSHEV INTEGRAL</span></div>
+</h1>
+
+<main class="puzzle-main">
+    <h2 style="margin-top: 0">
+        Written by
+        
+kt3, lightbulbMEOW; Peer-reviewed by Cauchy
+
+    </h2>
+
+    
+    <p>The puzzle starts out with a section described as a "O", initially showing some more fundamental-looking equations and building up to more complicated configurations. </p>
+<p>A good first guess is that the double connection with a line on the top curve shows equality. For example, it says that square equals square. It also seems to show that some identity elements of operations, namely O for the double connection with no lines, and φ for the self-connecting curve.</p>
+<p>However, solvers may realize that the double connection with a line on the top curve is not an equals sign, but the subtraction operator, and the O section is describing different expressions that evaluate to 0.</p>
+<p>In this puzzle, circle-like objects represent numbers, while squares represent variables. Operations are denoted by curve lines. See the diagram below.</p>
+<p><img src="../static/puzzle_resources/alien-math/sol/operations.png" width=75%></p>
+<p>Nubmers are represented in base-5. The digits are read from largest circle to smallest circle.</p>
+<p><img src="../static/puzzle_resources/alien-math/sol/base5.png" width=50%></p>
+<p>Once we have enough understanding, we can solve the ⦻ (non-zero) part of the puzzle. The evaluations A1Z26 spell out ROTATENINETYDEGCW, which tells us to resolve everything but rotated 90 degrees clockwise.</p>
+<p>Thankfully, we can reuse most of our work, as this rotation only swaps out 1 and 3, as well as 2 and 4, per digit in the base 5 representation of each number. Redoing the calculations gives us <strong>CHEBYSHEV INTEGRAL</strong>, the answer to this puzzle.</p>
+
+    
+    
+    <h2 id="authors-notes">Author&rsquo;s Notes</h2>
+    <p>kt3: lightbulb and I devised the system pre-hiatus but never got around to actually constructing the puzzle. When we decided to revive the project, we had already forgotten about the details, and when we scoured through our poorly documented notes, we had to decode our tutorial.</p>
+    
+
+    
+    
+    <h2 id="appendix">Appendix</h2>
+    <p>Annotated slides: <a href="https://docs.google.com/presentation/d/1EudQyUgArjKHg9EuTzT7eEwAmX2dww6-NY9tXUsV0zA/edit?usp=sharing">https://docs.google.com/presentation/d/1EudQyUgArjKHg9EuTzT7eEwAmX2dww6-NY9tXUsV0zA/edit?usp=sharing</a></p>
+    
+</main>
+
+
+    </div>
+    
+    <script>
+        const skipToMainLink = document.querySelector("a.skip-to-main");
+        const mainContentElement = document.getElementsByTagName("main")?.item(0) || document.querySelector("div.content");
+        if (skipToMainLink && mainContentElement) {
+            const mainContentAnchor = document.createElement("a");
+            const anchorId = "main-content-anchor"
+            mainContentAnchor.className = anchorId;
+            mainContentAnchor.id = anchorId;
+            skipToMainLink.href = `#${anchorId}`;
+            mainContentElement.parentNode.insertBefore(mainContentAnchor, mainContentElement);
+        }
+    </script>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+</body>
+</html>

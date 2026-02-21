@@ -1,0 +1,161 @@
+
+
+
+
+
+<!doctype html>
+<html>    
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>Solution: The End</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="LN Hunt">
+    <meta property="og:description" content="Volume 1 releases Dec 6 7:00 JST. Register now!">
+    <meta property="og:image" content="https://ln-hunt.com/static/images/ln_white.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://ln-hunt.com/static/images/ln_white.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://ln-hunt.com/jsi18n/"></script>
+    <script src="../static/js/jquery.formset.js"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Red+Hat+Mono:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    
+<script>
+  /* FIXME */
+</script>
+
+</head>
+<body>
+    <a class="skip-to-main">Press enter to skip to main content.</a>
+    <nav class="top-navbar">
+        <span class="tray">
+            <div class="top-tabs">
+                <div class="top-team-actions">
+                    
+                </div>
+                <div class="site-nav">
+                    <a href="../index.html">
+                        Home
+                    </a>
+                    <a href="../about.html">
+                        About
+                    </a>
+                    
+                    
+                    <a class="selected-tab" href="../puzzles.html">
+                        Puzzles
+                    </a>
+                    
+                    <a href="../teams.html">
+                        Teams
+                    </a>
+                    
+                    <a href="../errata.html">
+                        Updates
+                    </a>
+                    
+                    
+                    <!--<a href="https://FIXME/archive">
+                        Archive
+                    </a>-->
+                </div>
+            </div>
+        </span>
+    </nav>
+    <script>
+    
+    
+    </script>
+    
+    <div class="top-more-actions">
+        
+<a href="../puzzle/the-end.html" class="btn">Back to the puzzle</a>
+
+    </div>
+    <div class="content">
+        
+<link rel="stylesheet" href="../static/css/the-end.css">
+
+<style>
+h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+h4 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 2rem 0;
+}
+</style>
+
+<h1>
+    Solution: The End
+    <div class="solved-title-marker">Answer: <span class="solved-title-answer spoiler">A BLOCKBUSTER HIT</span></div>
+</h1>
+
+<main class="puzzle-main">
+    <h2 style="margin-top: 0">
+        Written by
+        
+AndrescuIII, juckter, kt3, lightbulbmeow, spacewalker
+
+    </h2>
+
+    
+    <p>We are presented with grids associated with our answers. The flavortext alludes to a “game” of “life”, which may confirm a hunch that these are grids of Conway’s Game of Life.</p>
+<p>The first insight is that our answers always end in a Game of Life pattern (e.g. RATTLE<strong><a href="https://conwaylife.com/wiki/Snake">SNAKE</a></strong>). We may then also realize that the length of the first part of the answers match the number of alive cells in each pattern.</p>
+<p>Upon having this insight, we may try to hunt for these patterns in our grids, perhaps a few generations ahead.</p>
+<p>The main aha of this puzzle is that simulating the grids up to the first appearance of each pattern gives us a clean ordering, based on the number of steps it took to reach the configuration.</p>
+<p>We remember our insight that the length of the first part of each answer matches the number of cells in each pattern. Overlaying the first part’s letters to the cells in reading order, and taking the cells that were “there at the beginning” (or those that were in both the initial grid and the pattern) allows us to read the finishing skill: <strong>A BLOCKBUSTER HIT</strong>.</p>
+
+    
+    
+    <h2 id="authors-notes">Author&rsquo;s Notes</h2>
+    <p>There were serious plans to make the grids the puzzle page backgrounds, but we decided to just go for the simpler implementation.</p>
+    
+
+    
+    
+    <h2 id="appendix">Appendix</h2>
+    <p><img src="../static/puzzle_resources/the-end/1.png"><br/><br/><img src="../static/puzzle_resources/the-end/2.png"><br/><br/><img src="../static/puzzle_resources/the-end/3.png"><br/><br/><img src="../static/puzzle_resources/the-end/4.png"><br/><br/><img src="../static/puzzle_resources/the-end/5.png"><br/><br/><img src="../static/puzzle_resources/the-end/6.png"><br/><br/><img src="../static/puzzle_resources/the-end/7.png"><br/><br/><img src="../static/puzzle_resources/the-end/8.png"><br/><br/><img src="../static/puzzle_resources/the-end/9.png"><br/><br/><img src="../static/puzzle_resources/the-end/10.png"><br/><br/></p>
+    
+</main>
+
+
+    </div>
+    
+    <script>
+        const skipToMainLink = document.querySelector("a.skip-to-main");
+        const mainContentElement = document.getElementsByTagName("main")?.item(0) || document.querySelector("div.content");
+        if (skipToMainLink && mainContentElement) {
+            const mainContentAnchor = document.createElement("a");
+            const anchorId = "main-content-anchor"
+            mainContentAnchor.className = anchorId;
+            mainContentAnchor.id = anchorId;
+            skipToMainLink.href = `#${anchorId}`;
+            mainContentElement.parentNode.insertBefore(mainContentAnchor, mainContentElement);
+        }
+    </script>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,50 @@
+h1, h2, h3, .info-row, .puzzles-list, .puzzle-main, main, .round-flavor, .form-section, .hint-table {
+    min-width: 100%;
+    box-sizing: border-box;
+    background-color: var(--content-frame-color);
+    padding: 20px 30px;
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+@media screen {
+    html {
+        background: linear-gradient(to bottom, #5C1414, #A64B2A);
+    }
+}
+
+.puzzles-list tr:first-child td {
+    padding-top: 0px;
+}
+
+.puzzles-list tr:last-child td {
+    padding-bottom: 0px;
+}
+
+.puzzles-pokemon-type {
+    display: inline-block;
+    height: 7rem;
+    opacity: 0.5;
+}
+
+.puzzles-instance {
+    font-size: 2.2rem;
+}
+
+.puzzles-instance .puzzles-answer {
+    font-family: var(--text-font);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.puzzles-instance {
+    display: inline-block;
+    width: 30%;
+    border-radius: 100px;
+    margin: 0.5rem;
+}
+
+.puzzles-list td:first-child {
+    text-align: left;
+    font-weight: bold;
+}

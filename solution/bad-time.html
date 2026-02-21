@@ -1,0 +1,367 @@
+
+
+
+
+
+<!doctype html>
+<html>    
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>Solution: Bad Time</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="LN Hunt">
+    <meta property="og:description" content="Volume 1 releases Dec 6 7:00 JST. Register now!">
+    <meta property="og:image" content="https://ln-hunt.com/static/images/ln_white.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://ln-hunt.com/static/images/ln_white.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://ln-hunt.com/jsi18n/"></script>
+    <script src="../static/js/jquery.formset.js"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Red+Hat+Mono:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    
+<script>
+  /* FIXME */
+</script>
+
+</head>
+<body>
+    <a class="skip-to-main">Press enter to skip to main content.</a>
+    <nav class="top-navbar">
+        <span class="tray">
+            <div class="top-tabs">
+                <div class="top-team-actions">
+                    
+                </div>
+                <div class="site-nav">
+                    <a href="../index.html">
+                        Home
+                    </a>
+                    <a href="../about.html">
+                        About
+                    </a>
+                    
+                    
+                    <a class="selected-tab" href="../puzzles.html">
+                        Puzzles
+                    </a>
+                    
+                    <a href="../teams.html">
+                        Teams
+                    </a>
+                    
+                    <a href="../errata.html">
+                        Updates
+                    </a>
+                    
+                    
+                    <!--<a href="https://FIXME/archive">
+                        Archive
+                    </a>-->
+                </div>
+            </div>
+        </span>
+    </nav>
+    <script>
+    
+    
+    </script>
+    
+    <div class="top-more-actions">
+        
+<a href="../puzzle/bad-time.html" class="btn">Back to the puzzle</a>
+
+    </div>
+    <div class="content">
+        
+<link rel="stylesheet" href="../static/css/nether.css">
+
+<style>
+h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+h4 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 2rem 0;
+}
+</style>
+
+<h1>
+    Solution: Bad Time
+    <div class="solved-title-marker">Answer: <span class="solved-title-answer spoiler">UNDERDOG</span></div>
+</h1>
+
+<main class="puzzle-main">
+    <h2 style="margin-top: 0">
+        Written by
+        
+kt3, lightbulbMEOW
+
+    </h2>
+
+    
+    <p>We are presented with a series of audio clips and a list of cryptic clues and cryptics that don't seem to be solvable.</p>
+<p>This puzzle is a reference to the <a href="https://www.youtube.com/watch?v=KK3KXAECte4">Megalovania</a> memes on YouTube where the song is being transformed in some way, like beats being swapped.</p>
+<p>The audio clips show the beginning of Megalovania but transformed in some way. The first step of the puzzle is to identify these transformations.</p>
+<table>
+<thead>
+<tr>
+<th>Audio clips</th>
+<th>Audio Transformation</th>
+<th>Word Transformation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Audio clip 1</td>
+<td>Remove first note</td>
+<td>Remove first letter</td>
+</tr>
+<tr>
+<td>Audio clip 2</td>
+<td>Play first five notes after last five notes</td>
+<td>Swap word halves</td>
+</tr>
+<tr>
+<td>Audio clip 3</td>
+<td>Remove middle two notes</td>
+<td>Remove middle bigram</td>
+</tr>
+<tr>
+<td>Audio clip 4</td>
+<td>Prepend a G note</td>
+<td>Prepend a letter G</td>
+</tr>
+<tr>
+<td>Audio clip 5</td>
+<td>Append a D note</td>
+<td>Append a letter D</td>
+</tr>
+<tr>
+<td>Audio clip 6</td>
+<td>Shuffle the notes, with exactly one fixed note</td>
+<td>Anagram the letters, with exactly one fixed letter</td>
+</tr>
+</tbody>
+</table>
+<p>These interpretations are consistent with the footnotes. There are 11 each MIDI-playable Gs and Ds, and the exact number of note shuffles with one fixed point of the first ten notes of Megalovania is 41124, accounting for multiplicity (recognizing this is not that important). </p>
+<p>The next step is to notice that some of the cryptic clues seem almost solvable if some word was altered somehow. An intended break-in is the following example:</p>
+<p>"Even mage armies are huge (4)"</p>
+<p>MEGA seems like a good candidate for this clue, with definition "huge". </p>
+<p>If the first letter from "mage" was removed, the clue becomes</p>
+<p>"Even <b>age</b> armies are huge (4)"</p>
+<p>The wordplay part resolves to _G_A_M_E_ (take even letters of "age armies"). If we swap the halves of the word GAME, we get MEGA (!!!). This is the answer to the cryptic clue.</p>
+<p>It turns out, all the clues follow this pattern: One of the words in the clue should be transformed to get a valid wordplay, and the answer from the wordplay should also be transformed to match the definition part.</p>
+<p>The following shows the answers to the cryptic clues. See this <a href="https://docs.google.com/spreadsheets/d/1mTVD0KtjbU6-wp1mvYU_abrjdCmnP9focRa1qp36rrY/edit?gid=82865635#gid=82865635">sheet</a> for the notation used. The bolded word is the word to be transformed in the wordplay part.</p>
+<table>
+<thead>
+<tr>
+<th>Clue</th>
+<th>Transform 1</th>
+<th>Transform 2</th>
+<th>Answer</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Contract failed horribly with leader of Formula <b>One</b> (4)</td>
+<td>Prepend a letter G</td>
+<td>Remove first letter</td>
+<td>DEAL</td>
+<td>IDEAL(-f_)</td>
+</tr>
+<tr>
+<td>Even <b>mage</b> armies are huge (4)</td>
+<td>Remove first letter</td>
+<td>Swap word halves</td>
+<td>MEGA</td>
+<td>_G_A_M_E_</td>
+</tr>
+<tr>
+<td>Finishing <b>win</b> gone wrong (6)</td>
+<td>Append D at end</td>
+<td>Remove middle bigram</td>
+<td>ENDING</td>
+<td>ENDOWING*</td>
+</tr>
+<tr>
+<td>Greek philosopher -- <b>she</b> shelters second person in charge (6)</td>
+<td>Append D at end</td>
+<td>Swap word halves</td>
+<td>OUTLAY</td>
+<td>_LA(YOU)T_</td>
+</tr>
+<tr>
+<td>Headless horse kid acts as <b>selves</b> of (seizes) incomplete cosmic object</td>
+<td>Swap word halves</td>
+<td>Anagram the letters, with exactly one fixed letter</td>
+<td>NEBULA</td>
+<td>_U(NAB_)LE</td>
+</tr>
+<tr>
+<td>Heartless female <b>dealer</b> goes into type of examination to fill again</td>
+<td>Remove middle bigram</td>
+<td>Anagram the letters, with exactly one fixed letter</td>
+<td>RELOAD</td>
+<td>OR(D(-o)E)AL</td>
+</tr>
+<tr>
+<td>Heedless <b>ape</b> brought back after abrupt run (6)</td>
+<td>Prepend a letter G</td>
+<td>Anagram the letters, with exactly one fixed letter</td>
+<td>UNWARY</td>
+<td>RU_+NWAY&lt;</td>
+</tr>
+<tr>
+<td><b>Hero</b>, e.g. after victory agreement signing (6)</td>
+<td>Append D at end</td>
+<td>Remove first letter</td>
+<td>INKING</td>
+<td>WIN+KING</td>
+</tr>
+<tr>
+<td>Holiday <b>host</b> at heart with chief visitor, per crazy donkey</td>
+<td>Prepend a letter G</td>
+<td>Swap word halves</td>
+<td>PASSOVER</td>
+<td><em>O</em>+V_+ERP*+ASS</td>
+</tr>
+<tr>
+<td><b>Listening</b> (sh!) to front doorbell — make a ringing sound (4)</td>
+<td>Prepend a letter G</td>
+<td>Remove middle bigram</td>
+<td>DING</td>
+<td>(sh-&gt;D)INING</td>
+</tr>
+<tr>
+<td>Major contest to imply a reconstruction, losing central <b>estate</b> (8)</td>
+<td>Prepend a letter G</td>
+<td>Append D at end</td>
+<td>OLYMPIAD</td>
+<td>OLYMPIA(-t)*</td>
+</tr>
+<tr>
+<td>More worn out strainer with open hand <b>delegation</b> (5)</td>
+<td>Remove middle bigram</td>
+<td>Remove first letter</td>
+<td>OLDER</td>
+<td>COL(-_an_)DER</td>
+</tr>
+<tr>
+<td>Online reels featuring American <b>Post</b> return to counterpart</td>
+<td>Anagram the letters, with exactly one fixed letter</td>
+<td>Remove first letter</td>
+<td>FRO</td>
+<td>A_F_R_O_&lt;</td>
+</tr>
+<tr>
+<td>Sharp part of cash <b>drawers</b> (6)</td>
+<td>Anagram the letters, with exactly one fixed letter</td>
+<td>Append D at end</td>
+<td>SHREWD</td>
+<td>_SH REW_</td>
+</tr>
+<tr>
+<td>University lottery replaces second prize with <b>demo</b> of Playboy (4)</td>
+<td>Swap word halves</td>
+<td>Remove middle bigram</td>
+<td>YALE</td>
+<td>(r-&gt;Y)AFFLE</td>
+</tr>
+</tbody>
+</table>
+<p>Notice that there are 15 clues, and there are <sub>6</sub>C<sub>2</sub> = 15 ways to pair up the 6 transformations from the audio clips. Indeed, we see that each pair appearing in exactly one clue. The final step is to rearrange all 15 of our answers into a grid, depending on which two audio clips were used for it.</p>
+<table><tr><th>Audio clip</th><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr><tr><td>1</td><td>-</td><td>MEGA</td><td>OLDER</td><td>DEAL</td><td>INKING</td><td>FRO</td></tr><tr><td>2</td><td>MEGA</td><td>-</td><td>YALE</td><td>PASSOVER</td><td>OUTLAY</td><td>NEBULA</td></tr><tr><td>3</td><td>OLDER</td><td>YALE</td><td>-</td><td>DING</td><td>ENDING</td><td>RELOAD</td></tr><tr><td>4</td><td>DEAL</td><td>PASSOVER</td><td>DING</td><td>-</td><td>OLYMPIAD</td><td>UNWARY</td></tr><tr><td>5</td><td>INKING</td><td>OUTLAY</td><td>ENDING</td><td>OLYMPIAD</td><td>-</td><td>SHREWD</td></tr><tr><td>6</td><td>FRO</td><td>NEBULA</td><td>RELOAD</td><td>UNWARY</td><td>SHREWD</td><td>-</td></tr></table>
+
+<p>Reading the first letters of the words on the upper triangle gives MODIFY PONDEROUS, which is an instruction. If we apply all 6 transformations on the word PONDEROUS in order,</p>
+<table>
+<thead>
+<tr>
+<th>Word</th>
+<th>Transformation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PONDEROUS</td>
+<td></td>
+</tr>
+<tr>
+<td>ONDEROUS</td>
+<td>Remove first letter</td>
+</tr>
+<tr>
+<td>ROUSONDE</td>
+<td>Swap word halves</td>
+</tr>
+<tr>
+<td>ROUNDE</td>
+<td>Remove middle bigram</td>
+</tr>
+<tr>
+<td>GROUNDE</td>
+<td>Prepend a letter G</td>
+</tr>
+<tr>
+<td>GROUNDED</td>
+<td>Append D at end</td>
+</tr>
+<tr>
+<td>UNDERDOG</td>
+<td>Anagram the letters, with exactly one fixed letter</td>
+</tr>
+</tbody>
+</table>
+<p>The final answer is <b>UNDERDOG</b>.</p>
+
+    
+    
+    <h2 id="authors-notes">Author&rsquo;s Notes</h2>
+    <p>Audio Clip 6 used to just be "anagram", but we realized that it would be a superset of Audio Clip 2.</p>
+    
+
+    
+    
+</main>
+
+
+    </div>
+    
+    <script>
+        const skipToMainLink = document.querySelector("a.skip-to-main");
+        const mainContentElement = document.getElementsByTagName("main")?.item(0) || document.querySelector("div.content");
+        if (skipToMainLink && mainContentElement) {
+            const mainContentAnchor = document.createElement("a");
+            const anchorId = "main-content-anchor"
+            mainContentAnchor.className = anchorId;
+            mainContentAnchor.id = anchorId;
+            skipToMainLink.href = `#${anchorId}`;
+            mainContentElement.parentNode.insertBefore(mainContentAnchor, mainContentElement);
+        }
+    </script>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+</body>
+</html>

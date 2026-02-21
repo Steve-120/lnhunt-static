@@ -1,0 +1,282 @@
+
+
+
+
+
+<!doctype html>
+<html>    
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    
+<title>Solution: Puzzledoku</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="LN Hunt">
+    <meta property="og:description" content="Volume 1 releases Dec 6 7:00 JST. Register now!">
+    <meta property="og:image" content="https://ln-hunt.com/static/images/ln_white.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://ln-hunt.com/static/images/ln_white.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://ln-hunt.com/jsi18n/"></script>
+    <script src="../static/js/jquery.formset.js"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Red+Hat+Mono:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    
+<script>
+  /* FIXME */
+</script>
+
+</head>
+<body>
+    <a class="skip-to-main">Press enter to skip to main content.</a>
+    <nav class="top-navbar">
+        <span class="tray">
+            <div class="top-tabs">
+                <div class="top-team-actions">
+                    
+                </div>
+                <div class="site-nav">
+                    <a href="../index.html">
+                        Home
+                    </a>
+                    <a href="../about.html">
+                        About
+                    </a>
+                    
+                    
+                    <a class="selected-tab" href="../puzzles.html">
+                        Puzzles
+                    </a>
+                    
+                    <a href="../teams.html">
+                        Teams
+                    </a>
+                    
+                    <a href="../errata.html">
+                        Updates
+                    </a>
+                    
+                    
+                    <!--<a href="https://FIXME/archive">
+                        Archive
+                    </a>-->
+                </div>
+            </div>
+        </span>
+    </nav>
+    <script>
+    
+    
+    </script>
+    
+    <div class="top-more-actions">
+        
+<a href="../puzzle/puzzledoku.html" class="btn">Back to the puzzle</a>
+
+    </div>
+    <div class="content">
+        
+<link rel="stylesheet" href="../static/css/the-end.css">
+
+<style>
+h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+h4 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 2rem 0;
+}
+</style>
+
+<h1>
+    Solution: Puzzledoku
+    <div class="solved-title-marker">Answer: <span class="solved-title-answer spoiler">ZONE BLOCK</span></div>
+</h1>
+
+<main class="puzzle-main">
+    <h2 style="margin-top: 0">
+        Written by
+        
+kt3, Cauchy, Idontknow, juckter, lightbulbmeow, Rio Futaba
+
+    </h2>
+
+    
+    <p>We are presented with 9 grids that clue each row and each column, similar to popular games like <a href="https://pokedoku.com">Pokedoku</a>. Each grid also comes with a given sorting mechanism. Finally, an Extractiondoku is given at the end, instructing us to sort our grids by title lengths, although that is a bit curious because many of our grid titles are of length 8.</p>
+<p>After trying to fill in the grids, we can figure out that each grid resolves to a unique solution. However, the sorting mechanism is particularly tricky, resulting in many clashes among the entries (e.g. many of the items in Tacticku released together in the same patch).</p>
+<p>The main aha for this puzzle is that the clashes are intentional, and they may be interpreted as pencil markings to a Sudoku that can be resolved with logic. The arrangement of the grids at the end also features some ambiguity, but ultimately resolves to the following unique grid.</p>
+<p>Using the given equation for each row, we obtain numbers that spell out <strong>ZONE BLOCK</strong> in A1Z26.</p>
+<center><img src="../static/puzzle_resources/puzzledoku/gridsorts.png" width=50%></center>
+<center><img src="../static/puzzle_resources/puzzledoku/zoneblock.png" width=50%></center>
+
+    
+    
+
+    
+    
+    <h2 id="appendix">Appendix</h2>
+    <style>
+  table {
+    border-collapse: collapse;
+  }
+
+  td {
+    padding: 8px 12px;
+    border: none;
+    height: 50px;
+    width: 200px;
+  }
+
+  /* Add borders ONLY to bottom-right 3×3 */
+  tbody tr:nth-child(n+2) td:nth-child(n+2) {
+    border: 1px solid black;
+  }
+</style>
+
+<p><strong>BAdoku</strong> by lightbulbMEOW</p>
+<table><tr><td></td><td>Long twintails</td><td>Name contains R but not E</td><td>Tank</td></tr><tr><td>Highlander</td><td>Nozomi</td><td>Hikari</td><td>Aoba</td></tr><tr><td>Abydos</td><td>Serika</td><td>Shiroko</td><td>Hoshino</td></tr><tr><td>Seminar</td><td>Koyuki</td><td>Rio</td><td>Yuuka</td></tr></table>
+
+<p>This grid is about students from Blue Archive. The following link is useful for solving this grid: <a href="https://bluearchive.wiki/wiki/Characters">https://bluearchive.wiki/wiki/Characters</a>.</p>
+<p><em>Author notes:</em></p>
+<p>I really like anime girls with long twintails. Serika is best catgirl.</p>
+<hr>
+
+<p><strong>Digitku</strong> by everyone</p>
+<table><tr><td></td><td>Odd prime</td><td>Not square-free</td><td>Factorial</td></tr><tr><td>Has a line of symmetry on a 7-segment display</td><td>3</td><td>8</td><td>1</td></tr><tr><td>Used to spell CHILL in T9</td><td>5</td><td>4</td><td>2</td></tr><tr><td>Part of a 2-digit funny number</td><td>7</td><td>9</td><td>6</td></tr></table>
+
+<p>Since this grid is about digits, the whole puzzle is vaguely a sudoku, and the grid is 3x3, we can reasonably guess this grid contains each digit from 1 through 9 inclusive exactly once. Each column also uniquely specifies 3 single digits regardless of whether 0 is included or not, confirming this.</p>
+<p>The <a href="https://oeis.org">On-line Encyclopedia of Integer Sequences (OEIS)</a> is often helpful for looking up integer sequences or properties. This helps with the columns. The rows also specify 3 unique digits from 1 through 9 inclusive, although they require a bit more blood, sweat, and tears. In particular, after realizing “funny number” refers to 67 and 69, solvers will likely be crying blood.</p>
+<p><em>Author notes:</em></p>
+<p>Idontknow: The 2-digit funny number thing was so funny that it was the first row category set and was definitely going to be used. Originally I had some cursed category about whether the obsolete forms of Japanese formal numerals (aka “those Demon Slayer eye numbers”, although the obsolete forms occasionally still appear from economic trade because some of them are not obsolete as Chinese numerals) contained their ordinary forms but I’m glad that convoluted description was replaced with something much more…CHILL.</p>
+<p>Cauchy: Hi. After we set the rows I saw that 6, 7, and 9 were in different columns and I locked in. (That row was inspired by a puzzle from GPH 2024, which I realize doesn’t narrow things down very much.)</p>
+<hr>
+
+<p><strong>EpicTheMusicaldoku</strong> by juckter</p>
+<table><tr><td></td><td>Lyrics contain the word "son", but not in the first verse</td><td>10 or more crew members die</td><td>5+ word title</td></tr><tr><td>Less than 3:30 long</td><td>Charybdis</td><td>Survive</td><td>Not Sorry For Loving You</td></tr><tr><td>Final song of album</td><td>Six Hundred Strike</td><td>Ruthlessness</td><td>Would You Fall In Love With Me Again</td></tr><tr><td>Zeus Sings</td><td>God Games</td><td>Thunder Bringer</td><td>The Horse and The Infant</td></tr></table>
+
+<p>This grid concerns songs in EPIC: The Musical. All the information we’ll need is available through the wiki at <a href="https://epicthemusical.fandom.com/wiki/">https://epicthemusical.fandom.com/wiki/</a></p>
+<p>Most of the information can be quickly filled in. A search for Zeus’ character page will tell us that he sings in exactly three songs, which uniquely fill in the bottom row. There are exactly 4 songs in the musical with 5 words or more in their titles, and excluding <em>I Can’t Help But Wonder</em>, which fits none of the rows, these are also filled uniquely.</p>
+<p>Moving on to the middle column, the only songs featuring crew deaths are <em>Survive</em>, <em>Ruthlessness</em>, <em>Scylla</em>, and <em>Thunder Bringer</em>. With the last of these already used, and only 6 deaths in <em>Scylla</em>, this column is easily filled as well. This leaves us with the middle left and top left squares. With 4 of them already used, there are five final songs left to consider, and only <em>Six Hundred Strike</em> features the word “son” at all. We are left with the top left square, which is by far the hardest to pin down. Here it’s convenient to focus on the row’s condition first, which discards around half of the songs as options and allows us to eventually get the correct answer.</p>
+<p><em>Author notes:</em></p>
+<p>Oh boy, this grid had an unfortunate series of issues. Initially, it was just bugged, with both the top left and top middle squares being ambiguous. While the latter of these was reasonably easy to fix, the first wasn’t, and required substantial changes to the first row or column.</p>
+<p>I first tried a fix based on the row, with a condition along the lines of <em>“The ‘seconds part’ of the duration is less than 20”,</em> but ultimately ended up going with a change to the column since the condition was a little more natural. This turned out to be the wrong call, as it both introduced ambiguity with whether or not the intro of <em>Charybdis</em> counts as a verse, and made pinning down the final entry grindier than I wanted. To make matters worse, the answer checker for this grid had a typo on the answer string, making it frustrating to deal with this already confusing grid.</p>
+<p>I apologize for the issues, and I only hope the final version of the grid was at least a little more pleasant to work with.</p>
+<hr>
+
+<p><strong>Ganadoku</strong> by Rio Futaba</p>
+<table><tr><td></td><td>"<img src="../static/puzzle_resources/puzzledoku/image1.png" height=100>"</td><td>&lt<img src="../static/puzzle_resources/puzzledoku/image1.png" height=100>&gt</td><td>&lt<img src="../static/puzzle_resources/puzzledoku/image1.png" height=100>&gt</td></tr><tr><td>"A city in Italy"</td><td>ku</td><td>ru</td><td>no</td></tr><tr><td>&lt<img src="../static/puzzle_resources/puzzledoku/image2.png" height=100>&gt</td><td>ro</td><td>ko</td><td>na</td></tr><tr><td>&lt<img src="../static/puzzle_resources/puzzledoku/image3.png" height=100>&gt</td><td>be</td><td>o</td><td>ka</td></tr></table>
+
+<p>Intended solve path: Firstly, one should note that a lot of the images can be described by a Japanese answer with 3 syllables (the most obvious being the character names o-ka-be and ku-ro-be na-no-ka). Combined with the appearance of the symbols “” and &lt;&gt; (which are used in nutrimatic), a natural guess is that we should fill every cell with a kana such that the set of kana in each row and column anagrams to the corresponding picture (and for “” the kana appear in the right order). From here, one can deduce that the bottom two rows are &lt;korona&gt; and &lt;okabe&gt;. What does the column image represent? Doing an image search reveals that the character’s first name is Nanoka and surname is Kurobe, so it is plausible that two of the columns are {na,no,ka} and {ku,ro,be}. Combining with &lt;korona&gt; and &lt;okabe&gt;, we can fill in the following partial grid:</p>
+<table><tr><td></td><td>"<img src="../static/puzzle_resources/puzzledoku/image1.png" height=100>"</td><td>&lt<img src="../static/puzzle_resources/puzzledoku/image1.png" height=100>&gt</td><td>&lt<img src="../static/puzzle_resources/puzzledoku/image1.png" height=100>&gt</td></tr><tr><td>"A city in Italy"</td><td>ku</td><td>?/no</td><td>no/?</td></tr><tr><td>&lt<img src="../static/puzzle_resources/puzzledoku/image2.png" height=100>&gt</td><td>ro</td><td>ko/na</td><td>na/ko</td></tr><tr><td>&lt<img src="../static/puzzle_resources/puzzledoku/image3.png" height=100>&gt</td><td>be</td><td>o/ka</td><td>ka/o</td></tr></table>
+
+<p>To get the last column, we need to interpret the column image in a different way. The image shows Nanoka being angry, so we might be looking for a word that means angry and contains the kana o and ko. A common verb in Japanese that means “to get angry” is okoru, so we can replace ? with ru.</p>
+<p>Finally, we check whether kuruno or kunoru is the name of a city in Italy, and doing a search reveals that クルノ = Curno (while kunoru makes no sense), so the ambiguity in the first row is resolved.</p>
+<hr>
+
+<p><strong>Holodoku</strong> by Cauchy</p>
+<table><tr><td></td><td>Hololive English Myth</td><td>Hololive Japan 2nd Generation</td><td>Hololive Indonesia</td></tr><tr><td>Member of Holotori</td><td>Takanashi Kiara</td><td>Oozora Subaru</td><td>Pavolia Reine</td></tr><tr><td>147 cm or shorter</td><td>Gawr Gura</td><td>Murasaki Shion</td><td>Anya Melfissa</td></tr><tr><td>Blonde</td><td>Amelia Watson</td><td>Yuzuki Choco</td><td>Kaela Kovalskia</td></tr></table>
+
+<p>This puzzle is about Hololive, and sites like <a href="https://hololive.wiki/">https://hololive.wiki/</a> or <a href="https://virtualyoutuber.fandom.com/wiki/Hololive">https://virtualyoutuber.fandom.com/wiki/Hololive</a> will find the answers in short work. The column categories each have dedicated pages listing all their members, as does the first row on Hololive Wiki, and the row information is readily available on the respective talents’ wiki pages on both wikis provided. Birthdays are also easy to find on these wikis; remember that 0 is less than all other digits!</p>
+<p><em>Author notes:</em></p>
+<p>I’ve been really into Hololive since Myth debuted, so when I was thinking of topics that I could write a ‘doku about, this came up easily. My Hololive oshi was and will always be Amelia Watson, so I put her in first and then built the rest of the grid around that inclusion. I’m glad I was able to pull talents from Japan, English, and Indonesia in the final grid, though I wish I didn’t end up with so many that had graduated/became affiliates.</p>
+<hr>
+
+<p><strong>Hoyodoku</strong> by Idontknow</p>
+<table><tr><td></td><td>Genshin Impact</td><td>Honkai Star Rail</td><td>Zenless Zone Zero</td></tr><tr><td>Playable catgirl with 6-letter English name</td><td>Kirara</td><td>Cipher</td><td>Ju Fufu</td></tr><tr><td>Playable character whose given name in Chinese is 3 characters long and has a 芙 as the middle character</td><td>Nefer</td><td>Kafka</td><td>Evelyn</td></tr><tr><td>Electric-type playable character voiced by Juhuahua</td><td>Raiden</td><td>Acheron</td><td>Yanagi</td></tr></table>
+
+<p>The column headers give away that this grid is about miHoYo/HoYoverse games and that the provided row conditions manage to uniquely specify exactly one playable character from each game (there’s well over 200 in total).</p>
+<p>The Juhuahua category is relatively straightforward to look up and the catgirls in each game, for whatever reason known only to the Internet, have been listed and even tierlisted in multiple places online. There’s only one catgirl in HSR. The one potential point of confusion is some places will somewhat ironically list Keqing because her <em>shuang luoji</em> hairstyle resembles cat ears, but she doesn’t have any physical cat traits like the actual catgirls have.</p>
+<p>Finding Chinese names of Genshin characters can be tricky if you don’t know where to look, but there’s at least two big sources. <a href="https://en.wikipedia.org/wiki/List_of_Genshin_Impact_characters">All</a> <a href="https://en.wikipedia.org/wiki/List_of_Honkai:_Star_Rail_characters">three</a> <a href="https://en.wikipedia.org/wiki/List_of_Zenless_Zone_Zero_characters">games</a> as of December 2025 have their own Wikipedia pages listing all characters with names in both English and Chinese, so Ctrl-F’ing there will work. Even if those pages disappear, somewhere they likely won’t disappear is in <a href="https://wiki.biligame.com/ys/%E8%A7%92%E8%89%B2">each game</a>’s <a href="https://wiki.biligame.com/sr/%E8%A7%92%E8%89%B2%E5%9B%BE%E9%89%B4">Bilibili</a> <a href="https://wiki.biligame.com/zzz/%E8%A7%92%E8%89%B2%E5%9B%BE%E9%89%B4">BWIKI</a>, which also have pages listing out all character names.</p>
+<p>Finally, we can confirm the correct version of each character’s name using the indicated websites and sort appropriately.</p>
+<p><em>Author notes:</em></p>
+<p>Oh no, the author notes are long.</p>
+<p>Does the extraction seem a little contrived to you? This grid was actually the last one to be made. I wanted to make a whole grid myself and there was one last slot that needed to be filled and Cauchy mentioned the two things that would be nice to make a grid about and seemed conspicuously missing from an ACGN-themed hunt were Touhou and Genshin Impact. When I learned those were the two available options I suddenly realized I was not beating the allegations any time soon and decided to just lean all the way into it. I really only play Zenless Zone Zero, and due to some author bias I thought it would be funny if I could get one group for each game, which everyone else signed off on, leaving me the daunting task of somehow uniquely specifying one character from each game with just one description even though Genshin alone has over 100 playable characters, HSR has ~80, and ZZZ has ~50. The row descriptions are all hyperspecific because of this, which I did think was a little inelegant, but the grid was already kind of a stunt grid anyway at conception and I thought the fun factor for this grid might just be in the fact that it can even exist rather than doing some intense puzzling.</p>
+<p>Regarding each individual row:</p>
+<ul>
+<li>Juhuahua voices a protagonist Raiden Mei in Honkai Impact 3rd and for thematic reasons (and probably favoritism), the creators seem to have kept her as a voice actor for an electric-type character in all 3 games. This has been noticed before and some people will call them “Raiden expies”, but if I use that term others will point out that plotwise they all have different stories. That honestly seems fine (even preferable) to me for expy characters, for several reasons I decided to go with the current description and not just say “Raiden expy”. This category came first and was what made me think that maybe I could fill the rest of the grid. Since this used up Raiden Shogun, I couldn’t use a “can’t cook” character description, but also, while there’s a ZZZ character who notably can’t cook (Rina), I don’t think there’s an HSR character that the same can be said about. Maybe The Herta? I have no idea if this is actually a well-known community meme though since I literally don’t play HSR and have to go off my brother’s streamer friends. I think also Himeko makes notably bad coffee??</li>
+<li>So I have a conspiracy theory about Furina (a Genshin). Always a solid sentence to start a paragraph with. One time a friend’s friend indirectly texted me about Furina and I noticed her name in Simplified Chinese is 芙宁娜, which is…really strange. Those last two characters are perfectly normal in transcriptions into Chinese, although lowkey the consonants would make more sense if her name were “Funina”, but whatever. There’s a standardized process to phonetically transcribe names into Chinese which uses the transcription table at <a href="https://en.wikipedia.org/wiki/Transcription_into_Chinese_characters#Transcription_table">this Wikipedia link</a> and this table was designed with several underlying principles and considerations I’m not going to get into here. Both 宁 and 娜 appear, so that makes sense. 宁 means “peaceful” and 娜 is often used in women’s names, so the name doesn’t sound inauspicious. A “fu” sound in the middle or end of a word would be transcribed using 夫 (different from the 芙 in Furina’s name) and in this context it would be completely meaningless, although elsewhere it means “man” or “husband”. At the beginning it should be 弗, which is purely a function word (i.e. only used for grammatical purposes) and thus means nothing to people when it’s not prescribed by the syntax or semantics of the sentence. But since that transcription is just the equivalent of a style guide, people who aren’t subject to the whims of a newspaper editor can pick different options. So Fontainebleau in Chinese is 枫丹白露, which both sounds similar and meaningfully refers to its famous deciduous forests (and got clipped into Fontaine = 枫丹 in Genshin). And if you just need any character that sounds like “fu”, well, 芙 means “fu” and can appear in (usually) women’s names (maybe more often in Japanese since it was also once used to transcribe the name of Mount Fuji, but for instance, it’s also part of Toph from Avatar’s name) maybe because it means “lotus” or “hibiscus”, although perhaps. It’s also the “foo” of “egg foo young” because that dish makes the egg look like a hibiscus blossom. You’re already bending the rules a bit for 宁, so why not use a prettier word here? And now the name makes perfect sense…. Except I lied slightly, because while throwing 芙  into Google Translate will indeed tell you it means “lotus” or “hibiscus”, overwhelmingly, meaningful words are all two characters long. 芙 may once have had a meaning by itself, although even in Classical Chinese which mostly used single characters for words this looks like one of the rare exceptions, but in the present day it only seems to appear in the names of some plants for its phonetic value. Since words in modern Chinese are often 2 characters long, talking about the meanings of individual characters can get a bit strange (a point puzzlehunts seem to miss often 🥀), but they do usually have understood meanings inherited from Classical Chinese. 芙 doesn’t. In “egg foo young”, the “hibiscus” part is actually the entire “foo young” = 芙蓉 (which in other contexts can mean “lotus”). 芙蓉 is by far the most common appearance of 芙, so in the absence of an actual meaning, the vacuum was filled with “the vague feeling of being associated with lotuses or hibiscuses”. But it still doesn’t appear in isolation except in names or abbreviations…. Except I lied again. There’s one “abbreviation” that isn’t treated as an abbreviation anymore. There’s a chengyu (four-character idiom) in Chinese, 出水芙蓉, which literally means a lotus flower emerging from the water but metaphorically refers to, among other things, a naturally beautiful woman (because she’s emerging from the water). That’s still not an abbreviation since I just said 芙蓉 is the whole word. However, a mathematician named Li Shanlan knew the reference while translating the names of asteroids. If this had happened today for an important asteroid, the names would probably be transcribed. For instance, the ⑬’th asteroid, 13 Egeria, is also the name of an important Genshin character that I will not get into because of spoilers but suffice it to say it has something to do with Furina. In Genshin her name is 厄歌莉娅, which is a phonetic translation with some aptly chosen characters. But Li was translating in an era when there weren’t that many asteroids discovered and wanted to semantically translate the names of asteroids. So ⑨ is named for Metis, Oceanid goddess of wisdom, and became 颖神星 or “cleverness–goddess–astronomical body” and (24) is named for Themis, Titan goddess of justice and divine law, and became 司理星 or “controller/official–laws of nature–astronomical body”. Egeria was a water nymph, lawgiver, and counsel to the second king of Rome, so her asteroid became…芙女星. 芙 here partially refers to that idiom, 出水芙蓉, I mentioned, and 女 means woman, so “beautiful woman (coming out of the water)–astronomical body”? I’m pretty sure Li didn’t actually think that was the most important thing about her, it’s just that besides, (24) Themis, ⑤ Astraea and ⑮ Eunomia are also goddesses of justice and it looks like he didn’t want to repeat the names of aspects of these figures in his translations because at some point you run out of characters that could roughly be translated as “law”. Anyway, this is the sole Chinese word I could find using 芙 and that doesn’t refer to a plant or use 芙 phonetically. Although speaking of phonetically, if I’d been writing in Chinese this whole time, 芙 would’ve rather suspiciously popped up another time in my writing. When referring to Greco-Roman mythology, “nymph” is translated as 宁芙. And that not only has the uncommon 芙 in Furina’s name, but it also has the 宁 which otherwise has a mismatched consonant. Anyway, that’s the conspiracy, that that name is referencing this whole mess. The non-conspiracy theory is they just took it from 芙瑞娜 = Furrina, goddess of springs, and threw in the “nymph” translation for lore reasons. Uhh, right the puzzle. Yeah for some reason I was thinking about the Chinese character 芙 and noticed it appearing in Kafka = 卡芙卡 from HSR’s name even though Franz Kafka’s name in Chinese is 卡夫卡 with that character I said is meaningless in name transcriptions. Elsewhere it means “man” or “husband”, so maybe that’s why they changed it? Then I noticed Evelyn’s name in ZZZ is 伊芙琳 even though normally it’s 伊夫琳 and no one thinks that’s masculine. At the time I noticed this, the only other (main) playable Genshin character with 芙 in their name was Arlecchino on a technicality (it’s not part of “Arlecchino” if you’re confused why it’s not on the Wikipedia or Bilibili sources I mentioned), but when I went to go check again for this puzzle, extremely fortuitously the new character Nefer had the character. This one isn’t strange because Nefertiti’s name is 娜芙蒂蒂, but it sure worked out and honestly people like Furrina, Nefertiti, and Sif = 希芙 often have 芙 in their name. The Nefer reference means the earliest this puzzle could’ve been written was September 12, 2025, which is an extremely funny way to date a puzzle, although I did see a puzzle that was invalidated by the introduction of Escoffier to Genshin once and thus must’ve been written before May 7, 2025 despite premiering after May 7, 2025, which is probably the only thing funnier to notice.</li>
+<li>I knew HSR had a catgirl due to research (not a euphemism 😭) and both Genshin and ZZZ have several. So I tried several things to narrow down the catgirls from each game, including story and their kits. I didn’t just want to do their names again since the 芙 is already about names, but after some tortuously long conditional about which stats the character scales off and what the color of their shoes were, I caved to this. Luckily I had a sorting mechanism that was natural and importantly, didn't really depend on the exact forms of names, so I could afford being nitpicky about names for this category right…?</li>
+</ul>
+<p>Unfortunately, due to constraints from the other 8 grids, my original sort order just barely didn’t work, so the others had to spaghetti together something else. The result depends on their names now. That means we need canonical sources for names. The most natural is the in-game display names; all the games have a “character archive” that lets you see the names of all playable characters, even the ones you don’t own. But this would require downloading the games and making accounts, which I didn’t want to force. There are Fandom wikis and official HoYoWikis, but those have articles under full names, which no one uses. For instance, Rina’s full name is Alexandrina Sebastiane, which is a mouthful. That criticism implies the natural thing to ask for is really “the names as they are commonly referred to by the community”, but since that’s not easy to look up, I recommended Keqingmains and Prydwen as canonical sources and proceed to die on the inside. Use <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTj2PaPq6Py_1B5fsOPj_Moc-tN_7mut7fICczI6lz1njyEIAInTnfB7lAraX4pYCRGNbaHGlIbFZ90/pubhtml">this</a> instead for ZZZ tips and builds.</p>
+<p>There’s one seeming discrepancy between KQM, the in-game display name, and the community name, namely for Raiden Shogun. It’s just “Raiden” on KQM, but it’s “Raiden Shogun” in-game. So which is it? Analysis of a private Discord server’s messages revealed it really does seem to be just “Raiden” when talking about things inside the game. When talking about Genshin Impact at a meta level as one game among many, it became “Raiden Shogun”. “Raiden” is her name and “Shogun” is, naturally enough, a title, so this is understandable. I assume it becomes “Raiden Shogun” in contexts where it matters that there are in fact other people named Raiden, such as the Mortal Kombat or Metal Gear Solid characters or everyone’s namesake the Japanese god of thunder and lightning, also known as Raijin. And I already mentioned Raiden Mei from Honkai Impact 3rd. So KQM matches the empirical community name even as I think that was more confusing than I’d hoped. Of course, it doesn’t change the 5th letter.</p>
+<p>I did notice the others say something about “VIRGIN YANFEI” but was too scared to inquire further.</p>
+<p>I did want to have a category that more benefitted those who played the games. For instance, I think “playable character whose body double had their neck maimed” is technically unique. However, that seems like a ginormous pain to double-check, especially since for obvious reasons it doesn’t tend to happen on-screen and thus is open to interpretation, not to mention the characters who died in unspecified manners that very well could’ve had their necks maimed. Oh yeah, and also it’s simultaneously kind of gory and unavoidably spoils plotlines. Other ideas along the story front were a little hampered along by lack of knowledge about HSR. Another potential category was “characters on the app icons for the games”, but Paimon is on Genshin’s app and since she’s not playable, she throws</p>
+<p>Some other sorting mechanisms were considered such as birthdays and heights. Unfortunately, when there’s 3 games, there’s a surprisingly high probability such basic information does not actually exist for all characters or at least not exist in the same way. HSR characters don’t have birthdays for instance (which, despite the logical-sounding lore reasons seems like one of the greatest free publicity self-owns ever since I’ve had non-Genshin playing friends get commissioned to draw Genshin art for birthdays and I’m sure they could’ve made it work given the existence of March 7th’s name) and Genshin characters have base model types that sort them into categories by height but no actual canonical heights and ZZZ characters have canonical heights but no base models (which is insane).</p>
+<p>Incidentally, if you’re ever finding it difficult to find weeb data, you can always try zh.moegirl 😉.</p>
+<hr>
+
+<p><strong>LoveLiveDoku</strong> by juckter</p>
+<table><tr><td></td><td>AB Blood Type</td><td>Gray Image Color</td><td>Hails from a foreign country</td></tr><tr><td>In a 4+ member subunit</td><td>Natsumi Onitsuka</td><td>Rina Tennoji</td><td>Emma Verde</td></tr><tr><td>Is a second year in their first anime appearance</td><td>You Watanabe</td><td>Kotori Minami</td><td>Lanzhu Zhong</td></tr><tr><td>Star Sign Cancer</td><td>Karin Asaka</td><td>Yoshiko Tsushima</td><td>Keke Tang</td></tr></table>
+
+<p>This grid concerns the various idols throughout the many iterations of the Love Live! franchise. We can find all information in the wiki at <a href="https://love-live.fandom.com/">https://love-live.fandom.com/</a>
+Some notes that are important for a correct interpretation:</p>
+<ul>
+<li>Some, but not all of the characters have canonical names for their image colors. Rather than using these names, we simply interpret colors that look reasonably gray as gray. For instance, Rina’s “Paper White” image color counts as gray.</li>
+<li>The phrasing of the second row automatically discards the members of <em>Hasunosora Girls' High School Idol Club</em> and <em>Ikizu Live! LOVE LIVE! BLUEBIRD</em>, as neither of these projects have received an anime adaptation.</li>
+<li>We must be careful to consider the first appearance of each character in the anime, since all the characters in <em>Love Live! School Idol Project</em> and <em>Love Live! Sunshine!!</em> go up a year at the end of their respective series.</li>
+</ul>
+<p>With these considerations, we can start solving by focusing on the rows. The only subunits with more than 3 members are QU4RTZ and 5yncri5e!, making this a relatively quick check. For the second row, the first 3 TV anime series contribute 3, 3, and 4 options respectively. This leaves us with the seemingly grindier third row. A good strategy here is to look up a list of birthdays for Love Live! characters, which allows us to narrow it down significantly faster.</p>
+<p>With some luck looking up information, one may alternatively stumble upon <a href="https://idol.st/idols/">https://idol.st/idols/</a> which provides a convenient lookup for most of the characteristics used in this grid, making the identification significantly less tedious.</p>
+<p><em>Author notes:</em></p>
+<p>Watching people attempt this made me realize I’m way more into Love Live than I realized. I assumed the information gathering would not be too bad thanks to idol.st allowing for quick lookups on most things. As it turns out, you probably won’t be aware of a niche site for searching Love Live information unless you are already familiar with the franchise. My bad! Sharing this site’s existence is my gift of information to the puzzling community for any future Love Live puzzles, which are sure to come in the future by my own hand if not anyone else’s.
+This grid did also necessitate a little bit of wiki editing due to the aforementioned year jump at the end of Love Live! Sunshine!! While for every main character the wiki does a good job of mentioning their original grade, it did not do so for some supporting characters! This introduced a spurious second possibility if one were to put a certain first-year-turned-second-year supporting character in the center left square, and although including only main characters is a reasonable assumption, I made sure to clarify this in the wiki to prevent this possibility.</p>
+<hr>
+
+<p><strong>P5Rdoku</strong> by Cauchy</p>
+<table><tr><td></td><td>Agility 56</td><td>Learns Concentrate by leveling</td><td>Resist Phys</td></tr><tr><td>Level 84</td><td>Hastur</td><td>Odin</td><td>Ardha</td></tr><tr><td>Innately knows Mahamaon</td><td>Sraosha</td><td>Metatron</td><td>Sandalphon</td></tr><tr><td>Judgement Arcana</td><td>Michael</td><td>Satan</td><td>Yamata-no-Orochi</td></tr></table>
+
+<p>A list of all Personas in Persona 5 Royal can be found at <a href="https://megamitensei.fandom.com/wiki/List_of_Persona_5_Royal_Personas">https://megamitensei.fandom.com/wiki/List_of_Persona_5_Royal_Personas</a> , which is sorted by Arcana and can be searched easily for level. <a href="https://megamitensei.fandom.com/wiki/Mahamaon#By_leveling_up_5">https://megamitensei.fandom.com/wiki/Mahamaon#By_leveling_up_5</a> can be used to see which Personas innately know Mahamaon and <a href="https://megamitensei.fandom.com/wiki/Concentrate#By_leveling_up_4">https://megamitensei.fandom.com/wiki/Concentrate#By_leveling_up_4</a> can be used to see which Personas learn Concentrate by leveling. Agility 56 and Resist Phys can be checked on individual Persona pages, for example at <a href="https://megamitensei.fandom.com/wiki/Sraosha#Persona_5_/_Royal">https://megamitensei.fandom.com/wiki/Sraosha#Persona_5_/_Royal</a> . These individual Persona pages also list the Endurance for each Persona.</p>
+<p><em>Author notes:</em></p>
+<p>As I was trying to come up with more ‘dokus, I was thinking through games that had a lot of stats that both could be referenced and were well-documented. I quickly settled on Persona 3/4/5 for each Persona canonically having 5 stats, a level, a list of learnable moves, and a list of weaknesses and resistances, all ripe for the cluing. My first attempt was with Persona 5 Royal since it was the most recent, and I was able to make a grid, so here we are. I noted during hunt that some people had Anubis instead of Yamata-no-Orochi; Anubis resists Psy (Psychic), not Phys (Physical)!</p>
+<hr>
+
+<p><strong>Tacticku</strong> by kt3</p>
+<table><tr><td></td><td>B. F. Sword</td><td>Recurve Bow</td><td>Giant's Belt</td></tr><tr><td>Needlessly Large Rod</td><td>Hextech Gunblade</td><td>Guinsoo’s Rageblade</td><td>Morellonomicon</td></tr><tr><td>Tear of the Goddess</td><td>Spear of Shojin</td><td>Void Staff</td><td>Spirit Visage</td></tr><tr><td>Negatron Cloak</td><td>Bloodthirster</td><td>Kraken’s Fury</td><td>Evenshroud</td></tr></table>
+
+<p>We use the item recipes for the TFT set as of this puzzle’s writing (first patch of Set 16). Then, we check each item’s history to see when they were first introduced.</p>
+<p>Bloodthister, Guinsoo’s Rageblade, Hextech Gunblade, Morellonomicon, and Spear of Shojin were introduced in the first ever set, in a patch confusingly called V9.13.</p>
+<p>Meanwhile, Evenshroud was released in Set 9.5, in Patch 13.18.</p>
+<p>Kraken’s Fury, Spirit Visage, and Void Staff were part of a big overhaul in Patch 14.5 (in the middle of Set 14).</p>
+<p><em>Author notes:</em></p>
+<p>Evenshroud’s patch history is not properly documented in the fan wiki, for some reason. I am also relieved that Set 16, which released 3 days before hunt, did not bring any item changes.</p>
+    
+</main>
+
+
+    </div>
+    
+    <script>
+        const skipToMainLink = document.querySelector("a.skip-to-main");
+        const mainContentElement = document.getElementsByTagName("main")?.item(0) || document.querySelector("div.content");
+        if (skipToMainLink && mainContentElement) {
+            const mainContentAnchor = document.createElement("a");
+            const anchorId = "main-content-anchor"
+            mainContentAnchor.className = anchorId;
+            mainContentAnchor.id = anchorId;
+            skipToMainLink.href = `#${anchorId}`;
+            mainContentElement.parentNode.insertBefore(mainContentAnchor, mainContentElement);
+        }
+    </script>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+</body>
+</html>
